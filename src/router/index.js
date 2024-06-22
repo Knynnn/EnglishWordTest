@@ -11,6 +11,11 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/Kaoyan_Vocabulary',
+    name: 'Kaoyan',
+    component: () => import(/* webpackChunkName: "about" */ '../views/KaoyanView.vue')
+  },
+  {
     path: '/Cet-4_Vocabulary',
     name: 'Cet-4',
     component: () => import(/* webpackChunkName: "about" */ '../views/Cet-4View.vue')
@@ -21,8 +26,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Cet-6View.vue')
   },
   {
-    path: '/error_edition',
-    name: 'error_edition',
+    path: '/My_Vocabulary',
+    name: 'My_Vocabulary',
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {

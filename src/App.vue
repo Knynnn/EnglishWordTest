@@ -24,14 +24,15 @@
           <el-submenu index="2">
             <template slot="title">
               <i class="el-icon-location"></i>
-              <span>词汇汇总</span>
+              <span>词库</span>
             </template>
-              <el-menu-item index="/Cet-4_Vocabulary">四级词汇</el-menu-item>
-              <el-menu-item index="/Cet-6_Vocabulary">六级词汇</el-menu-item>
+              <el-menu-item index="/Kaoyan_Vocabulary">考研词库</el-menu-item>
+              <el-menu-item index="/Cet-4_Vocabulary">四级词库</el-menu-item>
+              <el-menu-item index="/Cet-6_Vocabulary">六级词库</el-menu-item>
           </el-submenu>
-          <el-menu-item index="/error_edition">
+          <el-menu-item index="/My_Vocabulary">
             <i class="el-icon-collection"></i>
-            <span slot="title">错题本</span>
+            <span slot="title">我的词库</span>
           </el-menu-item>
           <el-menu-item index="/mine">
             <i class="el-icon-setting"></i>
