@@ -15,7 +15,7 @@
             v-if="result !== null"
             title="估算的词汇量"
             type="success"
-            :description="`你的词汇量估算为：${result.estimatedVocabularySize}`"
+            :description="`你的词汇量估算为：${result.data}`"
             show-icon
         ></el-alert>
     </div>
@@ -28,7 +28,7 @@ export default {
     data() {
         return {
             form: {
-                knownWords: []
+                knownWords: [] // 确保初始化为数组
             },
             randomWords: [],
             result: null
@@ -48,14 +48,12 @@ export default {
         async onSubmit() {
             const knownWords = this.form.knownWords;
             const unknownWords = this.randomWords.map(word => word.word).filter(word => !knownWords.includes(word));
-            const testWords = this.randomWords.map(word => word.word);
             try {
                 const response = await axios.post('http://localhost:8080/kaoyanWord/testVocabulary', {
                     knownWords,
-                    unknownWords,
-                    testWords
+                    unknownWords
                 });
-                this.result = response.data.data;
+                this.result = response.data;
             } catch (error) {
                 console.error('Error estimating vocabulary size:', error);
             }

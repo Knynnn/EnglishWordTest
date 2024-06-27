@@ -28,7 +28,7 @@ export default {
     data() {
     return {
       user:{
-        name: '',
+        id: '',
         password: ''
       }
     }
@@ -36,7 +36,7 @@ export default {
     methods: {
         login() {
             request.post("/user/login", this.user).then(res => {
-                if (res.data.code === 0) {
+                if (res.code === '0') {
                     this.$message({
                         message: '登录成功',
                         type: 'success'

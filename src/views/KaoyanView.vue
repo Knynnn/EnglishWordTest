@@ -122,7 +122,7 @@ export default {
                 } else{
                     this.$message({
                         message: res.msg,
-                        type: 'warning'
+                        type: 'error'
                     });
                 }
             })
